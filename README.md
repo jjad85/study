@@ -24,6 +24,10 @@ For the project to work it requires that it be installed::
 		```
 		sudo yum install -y mongodb-org
 		```
+* _You must execute the command:_
+	```
+	npm install
+	```
 
 _After cloning the repository, you must proceed to create the ".env" file in the root of the application. Within this file, the following parameters must be created:_
 
