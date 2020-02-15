@@ -4,13 +4,13 @@ _Project developed for the administration of units, assemblies and CoWorking_
 
 ## Starting 🚀
 
-_After cloning the repository, you must proceed to create the ".env" file in the root of the application. Within this file, the following parameters must be created:
+_After cloning the repository, you must proceed to create the ".env" file in the root of the application. Within this file, the following parameters must be created:_
 
 * *PORT=* application listening port
 * *IP_BD=* database ID
 * *PORT_BD=* database port
 * *NAME_BD=* name of the database
-* *SECRET=* session Token creation key_
+* *SECRET=* session Token creation key
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
