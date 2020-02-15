@@ -35,7 +35,7 @@ _After cloning the repository, you must proceed to create the ".env" file in the
 
 ## Start execution ⚙️
 
-You must execute the command:
+_You must execute the command:_
 	```
 	npm run dev
 	```
@@ -47,23 +47,28 @@ We use [SemVer] (http://github.com) for versioning.
 ## Authors ✒️
 
 * **Juan Pablo Gaviria Salazar**
-	- Alias: *Mentor*
+	- _Alias:_ **The Mentor**
+	- _Position:_ Vice President I+D
 	- He is the person who leads the way of the technological part of this group.
 
 * **Yennifer Marcela Tobon Yate**
-	- Alias: *The Baby*
+	- _Alias:_ **The Baby**
+	- _Position:_ Vice Presidente TI
 	- She is the only girl in the group, she is a person who is in the process of training to start her professional life, she really wants to learn.
 
 * **Juan José Ocampo Castaño**
-	- Alias: *Worm*
+	- _Alias:_ **The Worm**
+	- _Position:_ Vice President TI
 	- He is the person who started this group of friends. He has a lot of knowledge in ISeries programming, he is eagerly learning this new technology.
 
 * **Carlos Arturo Orrego Franco** 
-	- Alias: *Liche*
+	- _Alias:_ **Liche - Fat**
+	- _Position:_ Vice President DataBase
 	- He is the person who knows most about related databases in this team, he is our AZ up his sleeve.
 
 * **Juan José Arango Díaz** 
-	- *Founder - The big boss*. 
+	- _Alias:_ **Founder - The big boss**
+	- _Position:_ President 
 	- He is the person in charge of giving the feminine touch to the documentation, interface. He is the person known for being the group's scolding
 
 ## License 📄
