@@ -12,34 +12,21 @@ _After cloning the repository, you must proceed to create the ".env" file in the
 * *NAME_BD=* name of the database
 * *SECRET=* session Token creation key
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
-
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
-
-```
-Da un ejemplo
-```
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+Para que el proyecto le funcione se requiere que se tenga instalado:
 
-_Dí cómo será ese paso_
-
+* NodeJS
+** Ubuntu:
 ```
-Da un ejemplo
+*** sudo yum install -y nodejs
 ```
-
-_Y repite_
-
+* MongoDB
+** Ubuntu:
 ```
-hasta finalizar
+*** sudo yum install -y mongodb-org
 ```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
 ## Ejecutando las pruebas ⚙️
 
