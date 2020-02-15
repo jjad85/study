@@ -4,90 +4,61 @@ _Project developed for the administration of units, assemblies and CoWorking_
 
 ## Starting 🚀
 
-_After cloning the repository, you must proceed to create the ".env" file in the root of the application. Within this file, the following parameters must be created:_
+This is an application that was developed to facilitate the administration of residential units and CoWorking, within this there are different modules such as:
 
-* **PORT=** application listening port
-* **IP_BD=** database ID
-* **PORT_BD=** database port
-* **NAME_BD=** name of the database
-* **SECRET=** session Token creation key
+* **Units:** This is a module where you can management the _units_
+* **Owners:** This is a module where you can management the _owners_
+* **Apartments:** This is a module where you can management the _apartaments_
 
+### Installation 🔧
 
-### Instalación 🔧
+For the project to work it requires that it be installed::
 
-Para que el proyecto le funcione se requiere que se tenga instalado:
-
-* NodeJS
-	* Ubuntu:
+* **NodeJS**
+	* _Ubuntu:_
 		```
 		sudo yum install -y nodejs
 		```
-* MongoDB
-	* Ubuntu:
+* **MongoDB**
+	* _Ubuntu:_
 		```
 		sudo yum install -y mongodb-org
 		```
 
-## Ejecutando las pruebas ⚙️
+_After cloning the repository, you must proceed to create the ".env" file in the root of the application. Within this file, the following parameters must be created:_
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+* **PORT=** application listening port
+* **IP_BD=** database IP
+* **PORT_BD=** database port
+* **NAME_BD=** name of the database
+* **SECRET=** session Token creation key
 
-### Analice las pruebas end-to-end 🔩
+## Start execution ⚙️
 
-_Explica que verifican estas pruebas y por qué_
+You must execute the command:
 
-```
-Da un ejemplo
-```
+	```
+		npm run dev
+	```
 
-### Y las pruebas de estilo de codificación ⌨️
+## Versioning 📌
 
-_Explica que verifican estas pruebas y por qué_
+We use [SemVer] (http://github.com) for versioning.
 
-```
-Da un ejemplo
-```
+## Authors ✒️
 
-## Despliegue 📦
+* **Juan Pablo Gaviria Salazar** - *Mentor*. He is the person who leads the way of the technological part of this group.
+* **Yennifer Marcela Tobon Yate** - *the baby*. She is the only girl in the group, she is a person who is in the process of training to start her professional life, she really wants to learn.
+* **Juan José Ocampo Castaño** - *Worm*. He is the person who started this group of friends. He has a lot of knowledge in ISeries programming, he is eagerly learning this new technology.
+* **Carlos Arturo Orrego Franco** - *Liche*. He is the person who knows most about related databases in this team, he is our AZ up his sleeve. 
+* **Juan José Arango Díaz** - *Founder - The big boss*. It has the feminine side for decoration, documentation and project style.
 
-_Agrega notas adicionales sobre como hacer deploy_
+## License 📄
 
-## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+This project is under License (SoftPower Company) - Any violation of it will give you an assured death
 
 ## Expresiones de Gratitud 🎁
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
+📢 	I want to thank each of you my dear team for the patience and dedication to this new project that we started.
+	If we all put the best attitude to this issue, we can have a company that helps us transform the lives of many people.
+	I love you so much.
