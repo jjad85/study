@@ -47,28 +47,28 @@ We use [SemVer] (http://github.com) for versioning.
 ## Authors ✒️
 
 * **Juan Pablo Gaviria Salazar**
-	- *Mentor*
+	- Alias: *Mentor*
 	- He is the person who leads the way of the technological part of this group.
 
 * **Yennifer Marcela Tobon Yate**
-	*The Baby*
-	She is the only girl in the group, she is a person who is in the process of training to start her professional life, she really wants to learn.
+	- Alias: *The Baby*
+	- She is the only girl in the group, she is a person who is in the process of training to start her professional life, she really wants to learn.
 
 * **Juan José Ocampo Castaño**
-	*Worm*
-	He is the person who started this group of friends. He has a lot of knowledge in ISeries programming, he is eagerly learning this new technology.
+	- Alias: *Worm*
+	- He is the person who started this group of friends. He has a lot of knowledge in ISeries programming, he is eagerly learning this new technology.
 
 * **Carlos Arturo Orrego Franco** 
-	*Liche*
-	He is the person who knows most about related databases in this team, he is our AZ up his sleeve.
+	- Alias: *Liche*
+	- He is the person who knows most about related databases in this team, he is our AZ up his sleeve.
 
 * **Juan José Arango Díaz** 
-	*Founder - The big boss*. 
-	He is the person in charge of giving the feminine touch to the documentation, interface. He is the person known for being the group's scolding
+	- *Founder - The big boss*. 
+	- He is the person in charge of giving the feminine touch to the documentation, interface. He is the person known for being the group's scolding
 
 ## License 📄
 
-This project is under License (SoftPower Company) - Any violation of it will give you an assured death
+This project is under License (_**SoftPower Company**_) - Any violation of it will give you an assured death
 
 ## Expressions of Gratitude 🎁
 
