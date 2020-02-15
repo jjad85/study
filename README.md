@@ -6,11 +6,11 @@ _Project developed for the administration of units, assemblies and CoWorking_
 
 _After cloning the repository, you must proceed to create the ".env" file in the root of the application. Within this file, the following parameters must be created:_
 
-* *PORT=* application listening port
-* *IP_BD=* database ID
-* *PORT_BD=* database port
-* *NAME_BD=* name of the database
-* *SECRET=* session Token creation key
+* **PORT=** application listening port
+* **IP_BD=** database ID
+* **PORT_BD=** database port
+* **NAME_BD=** name of the database
+* **SECRET=** session Token creation key
 
 
 ### Instalación 🔧
@@ -18,15 +18,15 @@ _After cloning the repository, you must proceed to create the ".env" file in the
 Para que el proyecto le funcione se requiere que se tenga instalado:
 
 * NodeJS
-** Ubuntu:
-```
-*** sudo yum install -y nodejs
-```
+	* Ubuntu:
+		```
+		sudo yum install -y nodejs
+		```
 * MongoDB
-** Ubuntu:
-```
-*** sudo yum install -y mongodb-org
-```
+	* Ubuntu:
+		```
+		sudo yum install -y mongodb-org
+		```
 
 ## Ejecutando las pruebas ⚙️
 
