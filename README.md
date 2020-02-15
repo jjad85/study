@@ -36,10 +36,9 @@ _After cloning the repository, you must proceed to create the ".env" file in the
 ## Start execution ⚙️
 
 You must execute the command:
-
-		```
-		npm run dev
-		```
+	```
+	npm run dev
+	```
 
 ## Versioning 📌
 
@@ -48,8 +47,8 @@ We use [SemVer] (http://github.com) for versioning.
 ## Authors ✒️
 
 * **Juan Pablo Gaviria Salazar**
-	*Mentor*
-	He is the person who leads the way of the technological part of this group.
+	- *Mentor*
+	- He is the person who leads the way of the technological part of this group.
 
 * **Yennifer Marcela Tobon Yate**
 	*The Baby*
