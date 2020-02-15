@@ -1,6 +1,6 @@
 const Propietario = require("../models/propModels"); 
 
-exports.obtenerpropietarios = async () => {
+exports.obtenerpropietarios = async (req) => {
   let propietarios;
   if (req.query.documento) {
     propietarios = await Propietario.findOne({

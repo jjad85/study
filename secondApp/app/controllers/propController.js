@@ -1,8 +1,8 @@
 const propService = require("../services/propService");
 
-exports.obtenerpropietarios = async (res) => {
+exports.obtenerpropietarios = async (req, res) => {
   try {
-    Propietario = await propService.obtenerpropietarios();
+    Propietario = await propService.obtenerpropietarios(req);
     res.status(200).send(Propietario);
   }catch(err){
     res.status(500).send(err);
