@@ -1,6 +1,6 @@
 const aptoService = require("../services/aptoService");
 
-exports.obtenerApartamento = async (res) => {
+exports.obtenerApartamento = async (req, res) => {
   try {
     Apartamento = await aptoService.obtenerApartamento();
     res.status(200).send(Apartamento);

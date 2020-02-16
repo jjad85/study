@@ -1,6 +1,6 @@
  const unidadService = require("../services/unidService");
 
-exports.obtenerUnidad = async (res) => {
+exports.obtenerUnidad = async (req, res) => {
   try {
     Unidad = await unidadService.obtenerUnidad();
     res.status(200).send(Unidad);
