@@ -3,9 +3,7 @@ const config = require('../configs/config');
 
 exports.autenticar = (user, pass) => {
   if (user == pass) {
-    const token = jwt.sign({id: user}, config.SECRET, {
-      expiresIn: 10000
-    });
+    const token = jwt.sign({id: user}, config.SECRET, {expiresIn: 10000});
     return token;
   } else {
     return "cualquier guevonada";
