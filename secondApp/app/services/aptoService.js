@@ -13,7 +13,6 @@ exports.obtenerApartamento = async () => {
 };
 
 exports.crearApartamento = async (apto, unid, prop) => { 
-  let apartamento = req.body;
   let addResult = await Apartamento.create(apto);
   let unidad = await Unidad.findById(unid);
   let propietario = await Propietario.findById(prop);
