@@ -21,7 +21,6 @@ exports.crearpropietario = async (prop) => {
 };
 
 exports.elimnarpropietarios = async (idProp) => {
-  let idPropietario = req.params.id;
   let deleResult = await Propietario.findByIdAndDelete(idProp);
   if (!deleResult) {
     return { error: "No esta el propoietario" };
