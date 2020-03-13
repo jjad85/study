@@ -4,8 +4,10 @@ const express = require("express"),
   config = require("./app/configs/config.js"),
   router = express.Router(),
   routes = require("./app/routes/index"),
-  mongoose = require("mongoose");
+  mongoose = require("mongoose"),
+  errorMiddleware = require("./app/middlewares/errorMiddleware");
 
+require('express-async-errors');
 app.use(
   bodyParser.urlencoded({
     extended: true
@@ -16,6 +18,7 @@ app.use(bodyParser.json());
 
 routes(router);
 app.use("/api", router);
+app.use(errorMiddleware);
 
 mongoose.connect(
   `mongodb://` + config.IP_BD + `:` + config.PORT_BD + `/` + config.NAME_BD,

@@ -1,6 +1,7 @@
 const Apartamento = require("../models/aptoModels"),
   Unidad = require("../models/unidModels"),
-  Propietario = require("../models/propModels");
+  Propietario = require("../models/propModels"),
+  ReqFieldException = require("../exceptions/ReqFieldException");
 
 exports.obtenerApartamento = async () => {
   let apartamento = await Apartamento.find()
@@ -13,6 +14,15 @@ exports.obtenerApartamento = async () => {
 };
 
 exports.crearApartamento = async (apto, unid, prop) => { 
+  if(!apto){
+    throw new ReqFieldException("Apartamento");
+  }
+  if(!unid){
+    throw new ReqFieldException("Unidad");
+  }
+  if(!prop){
+    throw new ReqFieldException("Propietario");
+  }
   let addResult = await Apartamento.create(apto);
   let unidad = await Unidad.findById(unid);
   let propietario = await Propietario.findById(prop);

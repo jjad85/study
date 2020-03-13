@@ -10,12 +10,8 @@ exports.obtenerApartamento = async (req, res) => {
 };
 
 exports.crearApartamento = async (req, res) => {
-  try {
-    Apartamento = await aptoService.crearApartamento(req.body, req.body.unidad, req.body.propietario);
-    res.status(200).send(Apartamento);
-  }catch(err){
-    res.status(500).send(err);
-  }
+  Apartamento = await aptoService.crearApartamento(req.body, req.body.unidad, req.body.propietario);
+  res.status(200).send(Apartamento);
 };
 
 exports.elimnarApartamentos = async (req, res) => {
