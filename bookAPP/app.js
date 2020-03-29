@@ -9,7 +9,7 @@ const express = require("express"),
 app.use(bodyParser.json());
 
 rutas(router);
-app.use("/api/V1", router);
+app.use("/api/v1", router);
 
 mongoose.connect(
   `mongodb://` + config.IP_BD + `:` + config.PORT_BD + `/` + config.NAME_BD,
