@@ -11,3 +11,17 @@ exports.signUp = async user => {
     }
     return await userService.createUser(user);
 };
+
+exports.singIn = async (username, pass) => {
+  const user = await userService.getUserByUsername(username);
+  if (!user)
+  {
+    throw new Error("Id de usuario no encontrado");
+  }
+  const resp = await user.comparePassword(pass);
+  if(!resp) {
+    throw new Error("Password incorrecto");    
+  }
+  const token = jwt.sign({ user: user._id }, config.SECRET, {expiresIn: 1000});
+  return token;
+};
