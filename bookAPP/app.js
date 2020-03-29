@@ -4,12 +4,21 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   mongoose = require("mongoose"),
   rutas = require("./app/routers/index"),
-  config = require("./app/configs/config.js");
+  config = require("./app/configs/config.js"),
+  errorMiddleware = require("./app/middlewares/errorMiddleware");
+
+require('express-async-errors');
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 
 app.use(bodyParser.json());
 
 rutas(router);
 app.use("/api/v1", router);
+app.use(errorMiddleware);
 
 mongoose.connect(
   `mongodb://` + config.IP_BD + `:` + config.PORT_BD + `/` + config.NAME_BD,
