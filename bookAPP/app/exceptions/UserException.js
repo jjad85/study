@@ -1,8 +1,8 @@
 class UserExistsException extends Error {
-	constructor(mssg) {
-		super(mssg);
-		this.status = 401;
-	}
+    constructor(mssg, status) {
+        super(mssg);
+        this.status = status;
+    }
 }
 
 module.exports = UserExistsException;
