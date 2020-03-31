@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../configs/config');
 const userService = require('../services/userService');
 const userModel = require('../models/userModels');
-const UserException = require('../exceptions/UserException');
+const ExceptionGeneral = require('../exceptions/ExceptionGeneral');
 const ReqFieldException = require('../exceptions/ReqFieldException');
 
 exports.signUp = async user => {
@@ -10,7 +10,7 @@ exports.signUp = async user => {
     const userExist = await userService.getUserByUsername(username);
     let User, newUser;
     if (userExist) {
-        throw new UserException('El username ya existe');
+        throw new ExceptionGeneral('El username ya existe');
     }
     newUser = await userService.createUser(user);
     User = await userModel
@@ -28,11 +28,11 @@ exports.singIn = async (username, pass) => {
     }
     const user = await userService.getUserByUsername(username);
     if (!user) {
-        throw new UserException('Id de usuario no encontrado', 404);
+        throw new ExceptionGeneral('Id de usuario no encontrado', 404);
     }
     const resp = await user.comparePassword(pass);
     if (!resp) {
-        throw new UserException('Password incorrecto', 401);
+        throw new ExceptionGeneral('Password incorrecto', 401);
     }
     const token = jwt.sign({ user: user._id }, config.SECRET, {
         expiresIn: 1000
