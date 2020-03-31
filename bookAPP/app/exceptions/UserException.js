@@ -4,5 +4,4 @@ class UserExistsException extends Error {
         this.status = status;
     }
 }
-
 module.exports = UserExistsException;
