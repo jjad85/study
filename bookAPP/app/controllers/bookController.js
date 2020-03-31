@@ -7,6 +7,9 @@ exports.addBook = async (req, res) => {
 
 exports.searchBook = async (req, res) => {
     param = req.query.search;
+    if (!param) {
+        param = '';
+    }
     Libros = await bookService.searchBook(param);
     res.status(200).send(Libros);
 };

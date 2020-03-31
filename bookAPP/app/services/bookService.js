@@ -10,10 +10,12 @@ exports.addBook = async libro => {
 };
 
 exports.searchBook = async param => {
-    if (!param) {
-        console.log('No hay parametro');
-    } else {
-        console.log('Si ahy parametro: ' + param);
-    }
-    let libros = await bookModel.findOne({});
+    let libros = await bookModel.find({
+        $or: [
+            { nombre: { $regex: '.*' + param + '.*' } },
+            { autor: { $regex: '.*' + param + '.*' } },
+            { categorias: { $regex: '.*' + param + '.*' } }
+        ]
+    });
+    return libros;
 };
