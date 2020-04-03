@@ -9,7 +9,7 @@ const UserSchema = new Schema({
     favoritos: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Book'
+            ref: 'book'
         }
     ]
 });

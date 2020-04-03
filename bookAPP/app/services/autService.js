@@ -10,7 +10,7 @@ exports.signUp = async user => {
     const userExist = await userService.getUserByUsername(username);
     let User, newUser;
     if (userExist) {
-        throw new ExceptionGeneral('El username ya existe');
+        throw new ExceptionGeneral('El username ya existe', 401);
     }
     newUser = await userService.createUser(user);
     User = await userModel
