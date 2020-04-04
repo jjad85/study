@@ -36,3 +36,30 @@ exports.findOneBook = async (req, res) => {
     }
     res.status(200).send(Libro);
 };
+
+exports.updateBook = async (req, res) => {
+    let idBook = req.params.id;
+    if (!idBook) {
+        throw new ReqFieldException('ID Book');
+    }
+    if (!req.body) {
+        throw new ExceptionGeneral('Debe enviar datos a modificar', 401);
+    }
+    let Libro = await bookService.updateBook(idBook, req.body);
+    if (!Libro) {
+        throw new ExceptionGeneral('Libro no encontrado', 401);
+    }
+    res.status(200).send(Libro);
+};
+
+exports.deleteBook = async (req, res) => {
+    let idBook = req.params.id;
+    if (!idBook) {
+        throw new ReqFieldException('ID Book');
+    }
+    let Libro = await bookService.deleteBook(idBook);
+    if (!Libro) {
+        throw new ExceptionGeneral('Libro no encontrado', 401);
+    }
+    res.status(200).send(Libro);
+};
