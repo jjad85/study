@@ -7,4 +7,7 @@ module.exports = (router) => {
     router.route('/libro/:id').get(middAuth, contBooks.findOneBook);
     router.route('/libro/:id').patch(middAuth, contBooks.updateBook);
     router.route('/libro/:id').delete(middAuth, contBooks.deleteBook);
+    router
+        .route('/libro/addfavorite/:id')
+        .post(middAuth, contBooks.addFavorite);
 };

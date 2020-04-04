@@ -43,3 +43,11 @@ exports.deleteBook = async (idBook) => {
     let Libro = await bookModel.findByIdAndDelete(idBook);
     return Libro;
 };
+
+exports.addFavorite = async (idUser, Book) => {
+    let user = userModel.updateOne(
+        { _id: idUser },
+        { $push: { favoritos: Book } }
+    );
+    return user;
+};

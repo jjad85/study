@@ -1,4 +1,5 @@
 const bookService = require('../services/bookService');
+const userService = require('../services/userService');
 const ExceptionGeneral = require('../exceptions/ExceptionGeneral');
 const ReqFieldException = require('../exceptions/ReqFieldException');
 
@@ -62,4 +63,23 @@ exports.deleteBook = async (req, res) => {
         throw new ExceptionGeneral('Libro no encontrado', 401);
     }
     res.status(200).send(Libro);
+};
+
+exports.addFavorite = async (req, res) => {
+    let idBook = req.params.id;
+    let idUser = req.user;
+    if (!idBook) {
+        throw new ReqFieldException('ID Book');
+    }
+    let Libro = await bookService.findOneBook(idBook);
+    if (!Libro) {
+        throw new ExceptionGeneral('Libro no encontrado', 401);
+    }
+    let blnFavorite = await bookService.isFavorite(idBook, idUser);
+    if (blnFavorite) {
+        throw new ExceptionGeneral('Libro ya es favorito del usuario', 401);
+    }
+    await bookService.addFavorite(idUser, Libro);
+    let usuario = await userService.findOneUser(idUser);
+    res.status(200).send(usuario);
 };
