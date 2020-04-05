@@ -51,3 +51,15 @@ exports.addFavorite = async (idUser, Book) => {
     );
     return user;
 };
+
+exports.rmFavorite = async (idUser, Book) => {
+    let users = await userModel.findById(idUser).populate({
+        path: 'favoritos',
+        model: bookModel,
+        select: 'nombre descripcion autor imagen categorias'
+    });
+
+    users.favoritos.pull(Book);
+    users.save();
+    return users;
+};

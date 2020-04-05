@@ -10,4 +10,5 @@ module.exports = (router) => {
     router
         .route('/libro/addfavorite/:id')
         .post(middAuth, contBooks.addFavorite);
+    router.route('/libro/rmfavorite/:id').post(middAuth, contBooks.rmFavorite);
 };
