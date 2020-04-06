@@ -53,13 +53,8 @@ exports.addFavorite = async (idUser, Book) => {
 };
 
 exports.rmFavorite = async (idUser, Book) => {
-    let users = await userModel.findById(idUser).populate({
-        path: 'favoritos',
-        model: bookModel,
-        select: 'nombre descripcion autor imagen categorias'
-    });
-
-    users.favoritos.pull(Book);
-    users.save();
-    return users;
+    await userModel.updateOne(
+        { _id: idUser },
+        { $pull: { favoritos: Book._id } }
+    );
 };

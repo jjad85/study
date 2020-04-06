@@ -14,18 +14,18 @@ const UserSchema = new Schema({
     ]
 });
 
-UserSchema.methods.toJSON = function() {
+UserSchema.methods.toJSON = function () {
     let user = this.toObject();
     delete user.password;
     return user;
 };
 
-UserSchema.methods.comparePassword = async function(password) {
+UserSchema.methods.comparePassword = async function (password) {
     let result = await bcrypt.compare(password, this.password);
     return result;
 };
 
-UserSchema.pre('save', async function(next) {
+UserSchema.pre('save', async function (next) {
     const user = this;
     if (!user.isModified('password')) {
         return next();

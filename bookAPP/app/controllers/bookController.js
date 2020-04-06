@@ -98,6 +98,7 @@ exports.rmFavorite = async (req, res) => {
     if (!blnFavorite) {
         throw new ExceptionGeneral('Libro no es favorito del usuario', 401);
     }
-    let usuario = await bookService.rmFavorite(idUser, Libro);
+    await bookService.rmFavorite(idUser, Libro);
+    let usuario = await userService.findOneUser(idUser);
     res.status(200).send(usuario);
 };
