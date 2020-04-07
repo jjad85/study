@@ -10,5 +10,5 @@ exports.singIn = async (req, res) => {
     const pass = req.body.password;
     const newToken = await authService.singIn(user, pass);
     const resp = { token: newToken };
-    return res.status(201).send(resp);
+    return res.status(200).send(resp);
 };
