@@ -2,18 +2,52 @@ const userModel = require('../models/userModels');
 const bookModel = require('../models/booksModels');
 
 exports.getUserByUsername = async (username) => {
-    return await userModel.findOne({ username: username });
+    let usuario = await userModel.findOne({ username: username });
+    return usuario;
 };
 
 exports.createUser = async (user) => {
-    return await userModel.create(user);
+    let usuario = await userModel.create(user);
+    return usuario;
 };
 
-exports.findOneUser = async (idUser) => {
-    let user = await userModel.findById(idUser).populate({
+exports.GetUsers = async () => {
+    let usuarios = await userModel.find().populate({
         path: 'favoritos',
         model: bookModel,
         select: 'nombre descripcion autor imagen categorias'
     });
-    return user;
+    return usuarios;
+};
+
+exports.findOneUser = async (idUser) => {
+    let usuario = await userModel.findById(idUser).populate({
+        path: 'favoritos',
+        model: bookModel,
+        select: 'nombre descripcion autor imagen categorias'
+    });
+    console.log('Si');
+    console.log('Usuario: ' + usuario);
+    return usuario;
+};
+
+exports.UpdateUser = async (idUser, user) => {
+    let updUser = await userModel.updateOne(
+        { _id: idUser },
+        {
+            $set: {
+                password: user.password,
+                name: user.name,
+                username: user.username
+            }
+        },
+        { upser: true }
+    );
+    let usuario = await userModel.findById(idUser);
+    return usuario;
+};
+
+exports.DeleteUser = async (idUser) => {
+    let usuario = await userModel.findByIdAndDelete(idUser);
+    return usuario;
 };

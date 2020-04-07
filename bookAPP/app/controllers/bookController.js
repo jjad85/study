@@ -7,13 +7,13 @@ exports.addBook = async (req, res) => {
     if (!req.body.nombre) {
         throw new ReqFieldException('Nombre');
     }
-    Libro = await bookService.addBook(req.body);
+    let Libro = await bookService.addBook(req.body);
     res.status(200).send(Libro);
 };
 
 exports.searchBook = async (req, res) => {
     param = req.query.search || '';
-    Libros = await bookService.searchBook(param);
+    let Libros = await bookService.searchBook(param);
     if (Libros == '') {
         throw new ExceptionGeneral('No hay libros con los criterios', 401);
     }
