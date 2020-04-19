@@ -32,16 +32,12 @@ exports.findOneUser = async (idUser) => {
 };
 
 exports.UpdateUser = async (idUser, user) => {
+    let userOriginal = await userModel.findById(idUser);
     let updUser = await userModel.updateOne(
         { _id: idUser },
         {
-            $set: {
-                password: user.password,
-                name: user.name,
-                username: user.username
-            }
-        },
-        { upser: true }
+            $set: user
+        }
     );
     let usuario = await userModel.findById(idUser);
     return usuario;
