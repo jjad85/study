@@ -14,9 +14,6 @@ exports.addBook = async (req, res) => {
 exports.searchBook = async (req, res) => {
     param = req.query.search || '';
     let Libros = await bookService.searchBook(param);
-    if (Libros == '') {
-        throw new ExceptionGeneral('No hay libros con los criterios', 401);
-    }
     res.status(200).send(Libros);
 };
 

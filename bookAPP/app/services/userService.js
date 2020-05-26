@@ -26,8 +26,6 @@ exports.findOneUser = async (idUser) => {
         model: bookModel,
         select: 'nombre descripcion autor imagen categorias'
     });
-    console.log('Si');
-    console.log('Usuario: ' + usuario);
     return usuario;
 };
 

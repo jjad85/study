@@ -5,7 +5,8 @@ const express = require('express'),
     mongoose = require('mongoose'),
     rutas = require('./app/routers/index'),
     config = require('./app/configs/config.js'),
-    errorMiddleware = require('./app/middlewares/errorMiddleware');
+    errorMiddleware = require('./app/middlewares/errorMiddleware'),
+    cors = require('cors');
 
 require('express-async-errors');
 app.use(
@@ -17,6 +18,7 @@ app.use(
 app.use(bodyParser.json());
 
 rutas(router);
+app.use(cors({ origin: '*' }));
 app.use('/api/v1', router);
 app.use(errorMiddleware);
 
@@ -27,7 +29,7 @@ mongoose.connect(
         useUnifiedTopology: true,
         useFindAndModify: true
     },
-    err => {
+    (err) => {
         if (err) {
             console.log('Se presentó un error: ' + err);
         }

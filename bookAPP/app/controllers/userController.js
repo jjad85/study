@@ -12,7 +12,6 @@ exports.GetUsers = async (req, res) => {
 
 exports.findOneUser = async (req, res) => {
     let idUser = req.params.id;
-    console.log('ID Ingreso: ' + idUser);
     if (!idUser) {
         throw new ReqFieldException('ID Book');
     }
