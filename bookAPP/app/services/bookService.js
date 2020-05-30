@@ -53,8 +53,9 @@ exports.addFavorite = async (idUser, Book) => {
 };
 
 exports.rmFavorite = async (idUser, Book) => {
-    await userModel.updateOne(
+    let user = await userModel.updateOne(
         { _id: idUser },
         { $pull: { favoritos: Book._id } }
     );
+    return user;
 };
