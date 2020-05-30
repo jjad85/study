@@ -9,9 +9,9 @@ exports.addBook = async (libro) => {
 exports.searchBook = async (param) => {
     let libros = await bookModel.find({
         $or: [
-            { nombre: { $regex: '.*' + param + '.*' } },
-            { autor: { $regex: '.*' + param + '.*' } },
-            { categorias: { $regex: '.*' + param + '.*' } }
+            { nombre: { $regex: '.*' + param + '.*', $options: 'i' } },
+            { autor: { $regex: '.*' + param + '.*', $options: 'i' } },
+            { categorias: { $regex: '.*' + param + '.*', $options: 'i' } }
         ]
     });
     return libros;
