@@ -37,7 +37,7 @@ UserSchema.pre('save', async function (next) {
 });
 
 UserSchema.pre('updateOne', async function (next) {
-    if (this._update.$set.password) {
+    if (this._update.$push.password) {
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(
             this._update.$set.password,
